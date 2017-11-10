@@ -13,7 +13,7 @@ public class Customer {
 	private PaymentInfo paymentCard;
 	private ArrayList<Seat> seatsPurchased;
 	
-	private Customer() {
+	public Customer() {
 		this.name = "Unknown";
 		this.address = new Address();
 		this.phone = "0000000000";

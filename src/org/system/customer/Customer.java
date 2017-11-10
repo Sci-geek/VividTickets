@@ -23,6 +23,8 @@ public class Customer {
 		this.seatsPurchased = new ArrayList<Seat>();
 	}
 
+	
+	
 	//Getters
 
 	public String getName() {
@@ -45,9 +47,10 @@ public class Customer {
 		return this.paymentCard;
 	}
 
-	public ArrayList<Seat> getSeatsPurchased() {
+	public ArrayList<Seat> getSeatsList() {
 		return this.seatsPurchased;
 	}
+
 	
 	//Setters
 	
@@ -69,9 +72,10 @@ public class Customer {
 	public void setPaymentCard(PaymentInfo paymentCard) {
 		this.paymentCard = paymentCard;
 	}
-
-	public void setSeatsPurchased(ArrayList<Seat> seatsPurchased) {
-		this.seatsPurchased = seatsPurchased;
-	}
 	
+	//Misc
+	public void addSeat(Seat seat) {
+		this.seatsPurchased.add(seat);
+	}
+
 }

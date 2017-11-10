@@ -7,8 +7,8 @@ public class Address {
 	private String state;
 	private String country;
 	private int zipCode;
-
-	public Address() {​ 
+	
+	public Address() {
 		this.street = "Unknown";
 		this.city = "Unknown";
 		this.state = "Unknown";

@@ -6,13 +6,12 @@ import org.system.event.*;
 
 public class Customer {
 
-	​private String name; 
-	​private Address address;​
+	private String name;
+	private Address address;
 	private String phone;
-	private ​String email;
-	private ​PaymentInfo paymentCard;
-	​private ArrayList<Seat> seatsPurchased;​
-
+	private String email;
+	private PaymentInfo paymentCard;
+	private ArrayList<Seat> seatsPurchased;
 	
 	private Customer() {
 		this.name = "Unknown";

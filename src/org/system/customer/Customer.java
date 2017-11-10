@@ -6,17 +6,6 @@ import org.system.event.*;
 
 public class Customer {
 
-<<<<<<< HEAD
-	​private String name; 
-	​private Address address;​
-	private String phone;
-	private ​String email;
-	private ​PaymentInfo paymentCard;
-	​private ArrayList<Seat> seatsPurchased;​
-
-	
-	private Customer() {
-=======
 	private String name;
 	private Address address;
 	private String phone;
@@ -25,7 +14,6 @@ public class Customer {
 	private ArrayList<Seat> seatsPurchased;
 	
 	public Customer() {
->>>>>>> finn
 		this.name = "Unknown";
 		this.address = new Address();
 		this.phone = "0000000000";
@@ -34,11 +22,8 @@ public class Customer {
 		this.seatsPurchased = new ArrayList<Seat>();
 	}
 
-<<<<<<< HEAD
-=======
 	
 	
->>>>>>> finn
 	//Getters
 
 	public String getName() {
@@ -61,16 +46,10 @@ public class Customer {
 		return this.paymentCard;
 	}
 
-<<<<<<< HEAD
-	public ArrayList<Seat> getSeatsPurchased() {
-		return this.seatsPurchased;
-	}
-=======
 	public ArrayList<Seat> getSeatsList() {
 		return this.seatsPurchased;
 	}
 
->>>>>>> finn
 	
 	//Setters
 	
@@ -92,18 +71,10 @@ public class Customer {
 	public void setPaymentCard(PaymentInfo paymentCard) {
 		this.paymentCard = paymentCard;
 	}
-<<<<<<< HEAD
-
-	public void setSeatsPurchased(ArrayList<Seat> seatsPurchased) {
-		this.seatsPurchased = seatsPurchased;
-	}
-	
-=======
 	
 	//Misc
 	public void addSeat(Seat seat) {
 		this.seatsPurchased.add(seat);
 	}
 
->>>>>>> finn
 }

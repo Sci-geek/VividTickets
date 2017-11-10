@@ -18,23 +18,23 @@ public class Address {
 	
 	//Getters
 	public String getStreet() {
-		return street;
+		return this.street;
 	}
 	
 	public String getCity() {
-		return city;
+		return this.city;
 	}
 
 	public String getState() {
-		return state;
+		return this.state;
 	}
 
 	public String getCountry() {
-		return country;
+		return this.country;
 	}
 
 	public int getZipCode() {
-		return zipCode;
+		return this.zipCode;
 	}
 
 	

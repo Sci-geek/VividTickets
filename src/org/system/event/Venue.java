@@ -10,6 +10,7 @@ public class Venue {
 	private int numRows;
 	private int numSeatsPerRow;
 	private int capacity;
+	private Seat[][] seats;
 	private ArrayList<Event> eventList = new ArrayList<Event>();
 
 	//Constructor
@@ -19,15 +20,17 @@ public class Venue {
 		this.numRows = 0;
 		this.numSeatsPerRow = 0;
 		this.capacity = 0;
+		setSeats(new Seat[numRows][numSeatsPerRow]) ;
 	}
 	
 	public Venue(String venueName, Address venueAddress, 
-			int numRows, int numSeatsPerRow, int capacity){
+		int numRows, int numSeatsPerRow, int capacity){
 		this.venueName = venueName;
 		this.venueAddress = venueAddress;
 		this.numRows = numRows;
 		this.numSeatsPerRow = numSeatsPerRow;
 		this.capacity = capacity;
+		setSeats(new Seat[numRows][numSeatsPerRow]);
 	}
 
 	//getters and setters
@@ -112,6 +115,16 @@ public class Venue {
 	public int calculateSeatsAvailable(){
 		return 0;
 	}
+
+	public Seat[][] getSeats() {
+		
+		return seats;
+	}
+
+	public void setSeats(Seat[][] seats) {
+		this.seats = seats;
+	}
+	
 	
 }
 

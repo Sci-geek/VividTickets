@@ -21,7 +21,6 @@ public class Venue {
 		this.numLevels = 0;
 		this.numRows = 0;
 		this.numSeatsPerRow = 0;
-		this.capacity = 0;
 	}
 	
 	public Venue(String venueName, Address venueAddress, 

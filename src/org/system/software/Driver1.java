@@ -59,6 +59,21 @@ public class Driver1
 		Venue v1 = new Venue();
 		Venue v2 = new Venue();
 		
+		Address v1address = new Address();
+		Address v2address = new Address();
+		
+		v1address.setStreet("136 N Park Ave");
+		v1address.setCity("Tucson");
+		v1address.setState("AZ");
+		v1address.setZipCode(85719);
+		v1address.setCountry("USA");
+		
+		v2address.setStreet("318 E Congress St");
+		v2address.setCity("Tucson");
+		v2address.setState("AZ");
+		v2address.setZipCode(85701);
+		v2address.setCountry("USA");
+		
 		Event e1 = new Event();
 		Event e2 = new Event();
 		
@@ -67,6 +82,16 @@ public class Driver1
 		
 		Time t1 = new Time();
 		Time t2 = new Time();
+		
+		v1.setVenueAddress(v1address);
+		v1.setVenueName("The Rock");
+		v1.setNumRows(10);
+		v1.setNumSeatsPerRow(25);
+		
+		v2.setVenueAddress(v2address);
+		v2.setVenueName("Rialto Theatre");
+		v2.setNumRows(35);
+		v2.setNumSeatsPerRow(70);
 		
 		t1.setDay(6);
 		t1.setHour(18);
@@ -84,14 +109,25 @@ public class Driver1
 		e1.setDescription("With the sick breakdowns and thall that Vildhjarta have created in their latest album, death walls and moshes are to be expected. Bring a poncho");
 		e1.setEventTime(t1);
 		e1.setEventVenue(v1);
+		e1.setSeatPrice(30.00);
 		
 		e2.setEventName("Nick Offerman's 4th Of July Special");
 		e2.setDescription("Wrap some bacon around a hot dog and throw it on that steak. It's America's birthday presented by the most American American, Nick Offerman");
 		e2.setEventTime(t1);
 		e2.setEventVenue(v1);
+		e2.setSeatPrice(100.00);
 		
+		s1.setSeatEventd(e1);
+		s1.setSeatHolder(c1);
+		s1.setSeatPrice(e1.getSeatPrice());
+		s1.setRowNum(6);
+		s1.setSeatNum(6);
 		
-		
+		s2.setSeatEventd(e2);
+		s2.setSeatHolder(c2);
+		s2.setSeatPrice(e2.getSeatPrice());
+		s2.setRowNum(7);
+		s2.setSeatNum(4);
 		
 	}
 }

@@ -5,12 +5,14 @@ public class Event {
 	private Time eventTime;
 	private Venue eventVenue;
 	private String description;
+	private double seatPrice;
 	
 	
 	public Event() {
 		this.setEventName("null");
 		this.setEventTime(null);
 		this.setEventVenue(null);
+		this.seatPrice = -1.0;
 	}
 	
 	public Event(String eventName, Venue eventVenue, Time eventTime) {
@@ -50,6 +52,14 @@ public class Event {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public double getSeatPrice() {
+		return this.seatPrice;
+	}
+
+	public void setSeatPrice(double seatPrice) {
+		this.seatPrice = seatPrice;
 	}
 	
 

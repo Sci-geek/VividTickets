@@ -7,28 +7,24 @@ import org.system.customer.*;
 public class Venue {
 	private String venueName;
 	private Address venueAddress;
-	private int numLevels;
 	private int numRows;
 	private int numSeatsPerRow;
 	private int capacity;
 	private ArrayList<Event> eventList = new ArrayList<Event>();
-	//protected int ListofListCounter = 0;
 
 	//Constructor
 	public Venue(){
 		this.venueName = "Unknown";
 		this.venueAddress = new Address();
-		this.numLevels = 0;
 		this.numRows = 0;
 		this.numSeatsPerRow = 0;
 		this.capacity = 0;
 	}
 	
 	public Venue(String venueName, Address venueAddress, 
-			int numLevels, int numSections, int numRows, int numSeatsPerRow, int capacity){
+			int numRows, int numSeatsPerRow, int capacity){
 		this.venueName = venueName;
 		this.venueAddress = venueAddress;
-		this.numLevels = numLevels;
 		this.numRows = numRows;
 		this.numSeatsPerRow = numSeatsPerRow;
 		this.capacity = capacity;
@@ -50,27 +46,18 @@ public class Venue {
 	public int getCapacity() {
 		return capacity;
 	}
-	public void setCapacity(int capacity) {
-		this.capacity = numRows * numRows;
-	}
-	public int getNumLevels() {
-		return numLevels;
-	}
-	public void setNumLevels(int numLevels) {
-		this.numLevels = numLevels;
+	public void setCapacity(int capacity) { /////////////////////////// 
+		this.capacity = numRows * numSeatsPerRow;
 	}
 	public int getNumRows() {
 		return numRows;
 	}
-
 	public void setNumRows(int numRows) {
 		this.numRows = numRows;
 	}
-
 	public int getNumSeatsPerRow() {
 		return numSeatsPerRow;
 	}
-
 	public void setNumSeatsPerRow(int numSeatsPerRow) {
 		this.numSeatsPerRow = numSeatsPerRow;
 	}

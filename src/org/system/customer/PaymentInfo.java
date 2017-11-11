@@ -3,17 +3,17 @@ package org.system.customer;
 public class PaymentInfo {
 
 	private String cardCompany;
-	private String carType;
-	private double cardNumber;
-	private double securityCode;
+	private String cardType;
+	private String cardNumber;
+	private int securityCode;
 	private int expMonth;
 	private int expYear;
 
 	public PaymentInfo() {
 		this.cardCompany = "Unknown";
-		this.carType = "Unknown";
-		this.cardNumber = 0.00;
-		this.securityCode = 0.00;
+		this.cardType = "Unknown";
+		this.cardNumber = "0000000000000000";
+		this.securityCode = 0;
 		this.expMonth = 0;
 		this.expYear = 0;
 	}
@@ -25,15 +25,15 @@ public class PaymentInfo {
 		return this.cardCompany;
 	}
 
-	public String getCarType() {
-		return this.carType;
+	public String getCardType() {
+		return this.cardType;
 	}
 
-	public double getCardNumber() {
+	public String getCardNumber() {
 		return this.cardNumber;
 	}
 
-	public double getSecurityCode() {
+	public int getSecurityCode() {
 		return this.securityCode;
 	}
 
@@ -52,15 +52,15 @@ public class PaymentInfo {
 		this.cardCompany = cardCompany;
 	}
 
-	public void setCarType(String carType) {
-		this.carType = carType;
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
 	}
 
-	public void setCardNumber(double cardNumber) {
+	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
 
-	public void setSecurityCode(double securityCode) {
+	public void setSecurityCode(int securityCode) {
 		this.securityCode = securityCode;
 	}
 

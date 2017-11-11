@@ -60,5 +60,17 @@ public class Address {
 		this.zipCode = zipCode;
 	}
 
-	
+	public String addressToString() {
+		String addrString = "";
+		addrString += this.getStreet();
+		addrString += "\n"; 
+		addrString += getCity();
+		addrString += "\n";
+		addrString += getState();
+		addrString += "\n";
+		addrString += getZipCode();
+		addrString += "\n";
+		addrString += getCountry();
+		return addrString;
+	}
 }

@@ -83,16 +83,6 @@ public class Driver1
 		Time t1 = new Time();
 		Time t2 = new Time();
 		
-		v1.setVenueAddress(v1address);
-		v1.setVenueName("The Rock");
-		v1.setNumRows(10);
-		v1.setNumSeatsPerRow(25);
-		
-		v2.setVenueAddress(v2address);
-		v2.setVenueName("Rialto Theatre");
-		v2.setNumRows(35);
-		v2.setNumSeatsPerRow(70);
-		
 		t1.setDay(6);
 		t1.setHour(18);
 		t1.setMinute(6);
@@ -104,6 +94,16 @@ public class Driver1
 		t2.setMinute(0);
 		t2.setMonth(7);
 		t2.setYear(2018);
+				
+		v1.setVenueAddress(v1address);
+		v1.setVenueName("The Rock");
+		v1.setNumRows(10);
+		v1.setNumSeatsPerRow(25);
+		
+		v2.setVenueAddress(v2address);
+		v2.setVenueName("Rialto Theatre");
+		v2.setNumRows(35);
+		v2.setNumSeatsPerRow(70);
 		
 		e1.setEventName("Vildhjarta");
 		e1.setDescription("With the sick breakdowns and thall that Vildhjarta have created in their latest album, death walls and moshes are to be expected. Bring a poncho");
@@ -129,5 +129,40 @@ public class Driver1
 		s2.setRowNum(7);
 		s2.setSeatNum(4);
 		
+		c1.addSeat(s1);
+		c2.addSeat(s2);
+		
+		
+		System.out.println("First Customer");		
+		System.out.println("Name: "+ c1.getName());
+		System.out.println("Phone: " + c1.getPhone());
+		System.out.println("Email: " + c1.getEmail());
+		System.out.println("Address: \n"+ c1.getAddress().addressToString());
+		System.out.println("Payment Card: \n" + c1.getPaymentCard().getCardCompany() + "\n" + c1.getPaymentCard().getCardNumber() + "\n" + c1.getPaymentCard().getExpMonth() + "\n" + c1.getPaymentCard().getExpYear() + "\n" + c1.getPaymentCard().getSecurityCode() + "\n" + c1.getPaymentCard().getCardType());
+		for (int i = 0; i < c1.getSeatsList().size(); i++) {
+			System.out.println("Event: " + c1.getSeatsList().get(i).getSeatEventd().getEventName());
+			System.out.println("Event Description: " + c1.getSeatsList().get(i).getSeatEventd().getDescription());
+			System.out.println("Event Time: " + c1.getSeatsList().get(i).getSeatEventd().getEventTime().dateToString() + ", " + c1.getSeatsList().get(i).getSeatEventd().getEventTime().timeToString());
+			System.out.println("Seat: " + "Row " + c1.getSeatsList().get(i).getRowNum() + "Seat " + c1.getSeatsList().get(i).getSeatNum());
+			System.out.println("Seat Price: " + c1.getSeatsList().get(i).getSeatPrice() + ", paid by " + c1.getSeatsList().get(i).getSeatHolder().getName());
+			System.out.println("Venue: " + c1.getSeatsList().get(i).getSeatEventd().getEventVenue().getVenueName());
+			System.out.println("Venue Address: \n" +  c1.getSeatsList().get(i).getSeatEventd().getEventVenue().getVenueAddress().addressToString());
+		}
+		
+		System.out.println("Second Customer");		
+		System.out.println("Name: "+ c2.getName());
+		System.out.println("Phone: " + c2.getPhone());
+		System.out.println("Email: " + c2.getEmail());
+		System.out.println("Address: \n"+ c2.getAddress().addressToString());
+		System.out.println("Payment Card: \n" + c2.getPaymentCard().getCardCompany() + "\n" + c2.getPaymentCard().getCardNumber() + "\n" + c2.getPaymentCard().getExpMonth() + "\n" + c2.getPaymentCard().getExpYear() + "\n" + c2.getPaymentCard().getSecurityCode() + "\n" + c2.getPaymentCard().getCardType());
+		for (int i = 0; i < c2.getSeatsList().size(); i++) {
+			System.out.println("Event: " + c2.getSeatsList().get(i).getSeatEventd().getEventName());
+			System.out.println("Event Description: " + c2.getSeatsList().get(i).getSeatEventd().getDescription());
+			System.out.println("Event Time: " + c2.getSeatsList().get(i).getSeatEventd().getEventTime().dateToString() + ", " + c2.getSeatsList().get(i).getSeatEventd().getEventTime().timeToString());
+			System.out.println("Seat: " + "Row " + c2.getSeatsList().get(i).getRowNum() + "Seat " + c2.getSeatsList().get(i).getSeatNum());
+			System.out.println("Seat Price: " + c2.getSeatsList().get(i).getSeatPrice() + ", paid by " + c2.getSeatsList().get(i).getSeatHolder().getName());
+			System.out.println("Venue: " + c2.getSeatsList().get(i).getSeatEventd().getEventVenue().getVenueName());
+			System.out.println("Venue Address: \n" +  c2.getSeatsList().get(i).getSeatEventd().getEventVenue().getVenueAddress().addressToString());
+		}
 	}
 }

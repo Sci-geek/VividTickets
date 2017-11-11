@@ -55,5 +55,43 @@ public class Driver1
 		c2.setPhone("5202622455");
 		c2.setAddress(a2);
 		c2.setPaymentCard(pay2);
+		
+		Venue v1 = new Venue();
+		Venue v2 = new Venue();
+		
+		Event e1 = new Event();
+		Event e2 = new Event();
+		
+		Seat s1 = new Seat();
+		Seat s2 = new Seat();
+		
+		Time t1 = new Time();
+		Time t2 = new Time();
+		
+		t1.setDay(6);
+		t1.setHour(18);
+		t1.setMinute(6);
+		t1.setMonth(6);
+		t1.setYear(2017);
+
+		t2.setDay(4);
+		t2.setHour(23);
+		t2.setMinute(0);
+		t2.setMonth(7);
+		t2.setYear(2018);
+		
+		e1.setEventName("Vildhjarta");
+		e1.setDescription("With the sick breakdowns and thall that Vildhjarta have created in their latest album, death walls and moshes are to be expected. Bring a poncho");
+		e1.setEventTime(t1);
+		e1.setEventVenue(v1);
+		
+		e2.setEventName("Nick Offerman's 4th Of July Special");
+		e2.setDescription("Wrap some bacon around a hot dog and throw it on that steak. It's America's birthday presented by the most American American, Nick Offerman");
+		e2.setEventTime(t1);
+		e2.setEventVenue(v1);
+		
+		
+		
+		
 	}
 }
